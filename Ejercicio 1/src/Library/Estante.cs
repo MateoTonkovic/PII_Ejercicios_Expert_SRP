@@ -1,19 +1,17 @@
-using System;
 using System.Collections.Generic;
 
 
 public class Estante
 {
-    public List<Libro> Libros = new List<Libro>();
+    public Dictionary<string, Libro> Libros = new Dictionary<string, Libro>();
 
-    public void AgregarLibro(Libro LibroAAgregar)
+    public void AgregarLibro(string LugarLibro, Libro LibroAAgregar)
     {
-        this.Libros.Add(LibroAAgregar);
+        this.Libros.Add(LugarLibro, LibroAAgregar);
     }
 
-    public void QuitarLibro(Libro LibroAQuitar)
+    public void QuitarLibro(string Lugar)
     {
-        this.Libros.Remove(LibroAQuitar);
+        this.Libros.Remove(Lugar);
     }
-
 }

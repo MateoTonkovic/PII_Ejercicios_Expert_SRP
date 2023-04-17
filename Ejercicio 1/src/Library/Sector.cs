@@ -4,22 +4,16 @@ using System.Collections.Generic;
 
 public class Sector
 {
-    public List<Estante> Estantes { get; set; }
+    public Dictionary<string, Estante> Estantes = new Dictionary<string, Estante>();
 
-
-    public Sector(List<Estante> estantes)
+    public void AgregarEstante(string LugarDeEstante, Estante estanteAAgregar)
     {
-        this.Estantes = estantes;
+        this.Estantes.Add(LugarDeEstante, estanteAAgregar);
     }
 
-    public void AgregarEstante(Estante estanteAAgregar)
+    public void QuitarEstante(string LugarDeEstante)
     {
-        this.Estantes.Add(estanteAAgregar);
-    }
-
-    public void QuitarEstante(Estante estanteAQuitar)
-    {
-        this.Estantes.Remove(estanteAQuitar);
+        this.Estantes.Remove(LugarDeEstante);
     }
 
 }

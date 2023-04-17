@@ -1,15 +1,14 @@
 ﻿using System;
 
+
 public class Libro
 {
 
     public string Title { get; }
     public string Author { get; }
     public string Code { get; }
-    public string LibrarySector { get; set; }
-    public string LibraryShelve { get; set; }
 
-    public Libro(String title, String author, String code)
+    public Libro(string title, string author, string code)
     {
         this.Title = title;
         this.Author = author;
